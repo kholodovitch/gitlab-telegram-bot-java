@@ -12,6 +12,7 @@ import javax.ws.rs.ext.Provider;
 
 /**
  * @author Robin Müller
+ * @author Alexander Kholodovitch
  */
 @Provider
 @Consumes(MediaType.APPLICATION_JSON)
@@ -24,7 +25,7 @@ public class JacksonConfig implements ContextResolver<ObjectMapper> {
 	public static ObjectMapper getObjectMapper() {
 		return new ObjectMapper()
 				.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE)
-				.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-				.configure(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_AS_NULL, true);
+				.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true)
+				.configure(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_AS_NULL, false);
 	}
 }

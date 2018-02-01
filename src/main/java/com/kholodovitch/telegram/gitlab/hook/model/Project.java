@@ -8,6 +8,7 @@ import net.karneim.pojobuilder.GeneratePojoBuilder;
 
 /**
  * @author Robin Müller
+ * @author Alexander Kholodovitch
  */
 @GeneratePojoBuilder(intoPackage = "*.builder.generated", withFactoryMethod = "*")
 public class Project {
@@ -23,8 +24,8 @@ public class Project {
 	private String defaultBranch;
 	private String homepage;
 	private String url;
-	private String sshUrl;
-	private String httpUrl;
+	private String gitSshUrl;
+	private String gitHttpUrl;
 
 	public String getName() {
 		return name;
@@ -106,20 +107,20 @@ public class Project {
 		this.url = url;
 	}
 
-	public String getSshUrl() {
-		return sshUrl;
+	public String getGitSshUrl() {
+		return gitSshUrl;
 	}
 
-	public void setSshUrl(String sshUrl) {
-		this.sshUrl = sshUrl;
+	public void setGitSshUrl(String gitSshUrl) {
+		this.gitSshUrl = gitSshUrl;
 	}
 
-	public String getHttpUrl() {
-		return httpUrl;
+	public String getGitHttpUrl() {
+		return gitHttpUrl;
 	}
 
-	public void setHttpUrl(String httpUrl) {
-		this.httpUrl = httpUrl;
+	public void setGitHttpUrl(String gitHttpUrl) {
+		this.gitHttpUrl = gitHttpUrl;
 	}
 
 	public Integer getId() {
@@ -151,8 +152,8 @@ public class Project {
 				.append(defaultBranch, project.defaultBranch)
 				.append(homepage, project.homepage)
 				.append(url, project.url)
-				.append(sshUrl, project.sshUrl)
-				.append(httpUrl, project.httpUrl)
+				.append(gitSshUrl, project.gitSshUrl)
+				.append(getGitHttpUrl(), project.getGitHttpUrl())
 				.isEquals();
 	}
 
@@ -170,8 +171,8 @@ public class Project {
 				.append(defaultBranch)
 				.append(homepage)
 				.append(url)
-				.append(sshUrl)
-				.append(httpUrl)
+				.append(gitSshUrl)
+				.append(getGitHttpUrl())
 				.toHashCode();
 	}
 
@@ -189,8 +190,8 @@ public class Project {
 				.append("defaultBranch", defaultBranch)
 				.append("homepage", homepage)
 				.append("url", url)
-				.append("sshUrl", sshUrl)
-				.append("httpUrl", httpUrl)
+				.append("gitSshUrl", gitSshUrl)
+				.append("gitHttpUrl", getGitHttpUrl())
 				.toString();
 	}
 }

@@ -10,23 +10,16 @@ import net.karneim.pojobuilder.GeneratePojoBuilder;
 
 /**
  * @author Milena Zachow
+ * @author Alexander Kholodovitch
  */
 @GeneratePojoBuilder(intoPackage = "*.builder.generated", withFactoryMethod = "*")
 public class PipelineHook extends WebHook {
 
 	private User user;
-	public Integer projectId;
-	private List<Commit> commits;
+	private Commit commit;
 	private Project project;
 	private PipelineEventObjectAttributes objectAttributes;
-
-	public Integer getProjectId() {
-		return projectId;
-	}
-
-	public void setProjectId(Integer projectId) {
-		this.projectId = projectId;
-	}
+	private List<Build> builds;
 
 	public User getUser() {
 		return user;
@@ -36,12 +29,12 @@ public class PipelineHook extends WebHook {
 		this.user = user;
 	}
 
-	public List<Commit> getCommits() {
-		return commits;
+	public Commit getCommit() {
+		return commit;
 	}
 
-	public void setCommits(List<Commit> commits) {
-		this.commits = commits;
+	public void setCommit(Commit commit) {
+		this.commit = commit;
 	}
 
 	public Project getProject() {
@@ -61,6 +54,14 @@ public class PipelineHook extends WebHook {
 
 	}
 
+	public List<Build> getBuilds() {
+		return builds;
+	}
+
+	public void setBuilds(List<Build> builds) {
+		this.builds = builds;
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) {
@@ -73,9 +74,9 @@ public class PipelineHook extends WebHook {
 		return new EqualsBuilder()
 				.append(user, that.user)
 				.append(project, that.project)
-				.append(projectId, that.projectId)
-				.append(commits, that.commits)
+				.append(commit, that.commit)
 				.append(objectAttributes, that.objectAttributes)
+				.append(builds, that.builds)
 				.isEquals();
 	}
 
@@ -83,10 +84,10 @@ public class PipelineHook extends WebHook {
 	public int hashCode() {
 		return new HashCodeBuilder(17, 37)
 				.append(user)
-				.append(projectId)
 				.append(project)
-				.append(commits)
+				.append(commit)
 				.append(objectAttributes)
+				.append(builds)
 				.toHashCode();
 	}
 
@@ -95,9 +96,9 @@ public class PipelineHook extends WebHook {
 		return new ToStringBuilder(this)
 				.append("user", user)
 				.append("project", project)
-				.append("projectId", projectId)
 				.append("objectAttributes", objectAttributes)
-				.append("commits", commits)
+				.append("commit", commit)
+				.append("builds", builds)
 				.toString();
 	}
 }
