@@ -19,7 +19,7 @@ public class MainHandlers extends TelegramLongPollingCommandBot implements Runna
 	}
 
 	private void startAlertTimers() {
-        executorService.scheduleWithFixedDelay(this, 1, 12, TimeUnit.SECONDS);
+        //executorService.scheduleWithFixedDelay(this, 1, 12, TimeUnit.SECONDS);
 	}
 
 	@Override
