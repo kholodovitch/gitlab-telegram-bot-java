@@ -24,11 +24,7 @@ public class PipelineEventObjectAttributes {
 	private String beforeSha;
 	private String status;
 	private List<String> stages;
-
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date createdAt;
-
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date finishedAt;
 	private int duration;
 

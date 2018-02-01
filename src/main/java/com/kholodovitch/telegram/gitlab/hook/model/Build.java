@@ -20,11 +20,8 @@ public class Build {
 	private String stage;
 	private String name;
 	private String status;
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date createdAt;
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date startedAt;
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date finishedAt;
 	private String when;
 	private boolean manual;
