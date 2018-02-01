@@ -7,6 +7,8 @@ import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import net.karneim.pojobuilder.GeneratePojoBuilder;
 
 /**
@@ -22,7 +24,11 @@ public class PipelineEventObjectAttributes {
 	private String beforeSha;
 	private String status;
 	private List<String> stages;
+
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date createdAt;
+
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date finishedAt;
 	private int duration;
 

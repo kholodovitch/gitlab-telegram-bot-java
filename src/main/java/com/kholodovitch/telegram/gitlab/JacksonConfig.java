@@ -18,6 +18,10 @@ import javax.ws.rs.ext.Provider;
 @Produces(MediaType.APPLICATION_JSON)
 public class JacksonConfig implements ContextResolver<ObjectMapper> {
 	public ObjectMapper getContext(Class<?> type) {
+		return getObjectMapper();
+	}
+
+	public static ObjectMapper getObjectMapper() {
 		return new ObjectMapper()
 				.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE)
 				.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
