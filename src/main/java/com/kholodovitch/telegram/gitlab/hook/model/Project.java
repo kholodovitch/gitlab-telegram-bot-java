@@ -13,19 +13,20 @@ import net.karneim.pojobuilder.GeneratePojoBuilder;
 @GeneratePojoBuilder(intoPackage = "*.builder.generated", withFactoryMethod = "*")
 public class Project {
 
-	private Integer id;
+	private int id;
 	private String name;
 	private String description;
 	private String webUrl;
 	private String avatarUrl;
 	private String namespace;
-	private Integer visibilityLevel;
+	private int visibilityLevel;
 	private String pathWithNamespace;
 	private String defaultBranch;
 	private String homepage;
 	private String url;
 	private String gitSshUrl;
 	private String gitHttpUrl;
+	private String ciConfigPath;
 
 	public String getName() {
 		return name;
@@ -67,11 +68,11 @@ public class Project {
 		this.namespace = namespace;
 	}
 
-	public Integer getVisibilityLevel() {
+	public int getVisibilityLevel() {
 		return visibilityLevel;
 	}
 
-	public void setVisibilityLevel(Integer visibilityLevel) {
+	public void setVisibilityLevel(int visibilityLevel) {
 		this.visibilityLevel = visibilityLevel;
 	}
 
@@ -123,12 +124,20 @@ public class Project {
 		this.gitHttpUrl = gitHttpUrl;
 	}
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getCiConfigPath() {
+		return ciConfigPath;
+	}
+
+	public void setCiConfigPath(String ciConfigPath) {
+		this.ciConfigPath = ciConfigPath;
 	}
 
 	@Override
@@ -154,6 +163,7 @@ public class Project {
 				.append(url, project.url)
 				.append(gitSshUrl, project.gitSshUrl)
 				.append(getGitHttpUrl(), project.getGitHttpUrl())
+				.append(ciConfigPath, project.ciConfigPath)
 				.isEquals();
 	}
 
@@ -173,6 +183,7 @@ public class Project {
 				.append(url)
 				.append(gitSshUrl)
 				.append(getGitHttpUrl())
+				.append(ciConfigPath)
 				.toHashCode();
 	}
 
@@ -192,6 +203,7 @@ public class Project {
 				.append("url", url)
 				.append("gitSshUrl", gitSshUrl)
 				.append("gitHttpUrl", getGitHttpUrl())
+				.append("ciConfigPath", ciConfigPath)
 				.toString();
 	}
 }

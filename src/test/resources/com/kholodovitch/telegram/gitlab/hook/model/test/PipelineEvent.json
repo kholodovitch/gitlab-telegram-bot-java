@@ -21,6 +21,7 @@
     "avatar_url": "http://www.gravatar.com/avatar/e32bd13e2add097461cb96824b7a829c?s=80\u0026d=identicon"
   },
   "project": {
+    "id": 20,
     "name": "Gitlab Test",
     "description": "Atque in sunt eos similique dolores voluptatem.",
     "web_url": "http://192.168.64.1:3005/gitlab-org/gitlab-test",
@@ -30,7 +31,8 @@
     "namespace": "Gitlab Org",
     "visibility_level": 20,
     "path_with_namespace": "gitlab-org/gitlab-test",
-    "default_branch": "master"
+    "default_branch": "master",
+    "ci_config_path": null
   },
   "commit": {
     "id": "bcbb5ec396a2c0f828686f14fac9b80b780504f2",
@@ -121,10 +123,15 @@
         "username": "root",
         "avatar_url": "http://www.gravatar.com/avatar/e32bd13e2add097461cb96824b7a829c?s=80\u0026d=identicon"
       },
-      "runner": null,
+      "runner": {
+        "id": 3,
+        "description": "kholodovitch-umkamall",
+        "active": true,
+        "is_shared": false
+      },
       "artifacts_file": {
-        "filename": null,
-        "size": null
+        "filename": "artifacts.zip",
+        "size": 60519
       }
     },
     {

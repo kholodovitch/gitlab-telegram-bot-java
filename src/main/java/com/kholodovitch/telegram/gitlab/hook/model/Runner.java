@@ -15,7 +15,7 @@ public class Runner {
 	private int id;
 	private String description;
 	private boolean active;
-	private boolean isShared;
+	private boolean isIsShared;
 
 	public int getId() {
 		return id;
@@ -41,12 +41,12 @@ public class Runner {
 		this.active = active;
 	}
 
-	public boolean isShared() {
-		return isShared;
+	public boolean isIsShared() {
+		return isIsShared;
 	}
 
-	public void setShared(boolean isShared) {
-		this.isShared = isShared;
+	public void setIsShared(boolean isIsShared) {
+		this.isIsShared = isIsShared;
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public class Runner {
 				.append(id, runner.id)
 				.append(description, runner.description)
 				.append(active, runner.active)
-				.append(isShared, runner.isShared)
+				.append(isIsShared(), runner.isIsShared())
 				.isEquals();
 	}
 
@@ -72,7 +72,7 @@ public class Runner {
 				.append(id)
 				.append(description)
 				.append(active)
-				.append(isShared)
+				.append(isIsShared())
 				.toHashCode();
 	}
 
@@ -82,7 +82,7 @@ public class Runner {
 				.append("id", id)
 				.append("description", description)
 				.append("active", active)
-				.append("isShared", isShared)
+				.append("isShared", isIsShared())
 				.toString();
 	}
 
