@@ -1,0 +1,83 @@
+{
+  "object_kind": "push",
+  "event_name": "push",
+  "before": "cf8b81501cca0b49a4c677d1c53990ff7b34c6db",
+  "after": "a9e5b0f2cacda9fb83d9fffc1268264ab157f69d",
+  "ref": "refs/heads/master",
+  "checkout_sha": "a9e5b0f2cacda9fb83d9fffc1268264ab157f69d",
+  "message": null,
+  "user_id": 12,
+  "user_name": "Alexander Kholodovitch",
+  "user_username": "kholodovitch",
+  "user_email": "kholodovitch@gmail.com",
+  "user_avatar": "http://localhost/uploads/-/system/user/avatar/12/avatar.png",
+  "project_id": 20,
+  "project": {
+    "id": 20,
+    "name": "api",
+    "description": "",
+    "web_url": "http://localhost/api",
+    "avatar_url": null,
+    "git_ssh_url": "git@localhost:api.git",
+    "git_http_url": "http://localhost/api.git",
+    "namespace": "Mobile",
+    "visibility_level": 0,
+    "path_with_namespace": "api",
+    "default_branch": "master",
+    "ci_config_path": null,
+    "homepage": "http://localhost/api",
+    "url": "git@localhost:api.git",
+    "ssh_url": "git@localhost:api.git",
+    "http_url": "http://localhost/api.git"
+  },
+  "commits": [
+    {
+      "id": "a9e5b0f2cacda9fb83d9fffc1268264ab157f69d",
+      "message": "Add license.",
+      "timestamp": "2018-01-24T11:28:07+00:00",
+      "url": "http://localhost/api/commit/a9e5b0f2cacda9fb83d9fffc1268264ab157f69d",
+      "author": {
+        "name": "Alexander Kholodovitch",
+        "email": "kholodovitch@gmail.com"
+      },
+      "added": [
+        "LICENSE"
+      ],
+      "modified": [
+        
+      ],
+      "removed": [
+        
+      ]
+    },
+    {
+      "id": "cf8b81501cca0b49a4c677d1c53990ff7b34c6db",
+      "message": "Initial commit\n",
+      "timestamp": "2018-01-24T14:26:06+03:00",
+      "url": "http://localhost/api/commit/cf8b81501cca0b49a4c677d1c53990ff7b34c6db",
+      "author": {
+        "name": "Alexander Kholodovitch",
+        "email": "kholodovitch@gmail.com"
+      },
+      "added": [
+        
+      ],
+      "modified": [
+        
+      ],
+      "removed": [
+        
+      ]
+    }
+  ],
+  "total_commits_count": 2,
+  "repository": {
+    "name": "api",
+    "url": "git@localhost:api.git",
+    "description": "",
+    "homepage": "http://localhost/api",
+    "git_http_url": "http://localhost/api.git",
+    "git_ssh_url": "git@localhost:api.git",
+    "visibility_level": 0
+  }
+}
